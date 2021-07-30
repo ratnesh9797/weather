@@ -27,7 +27,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   // String url =
-  //     "http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=ed6dfc72aa7d115558dcc96ebea9a474";
+  //     "http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=";
 
   var data;
   // var res;
@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
     var res = await http.get(Uri.http(
         "api.openweathermap.org",
         "/data/2.5/weather",
-        {"q": "Noida,in", "appid": "ed6dfc72aa7d115558dcc96ebea9a474"}));
+        {"q": "Noida,in", "appid": "enter api key here"}));
     data = jsonDecode(res.body);
     print(data);
     setState(() {});
